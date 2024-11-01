@@ -1,0 +1,24 @@
+version: '3'
+networks:
+- expense
+volumes:
+- mysql
+services:
+  mysql:
+    image: venkat18b/mysql:v2
+    container_name: mysql
+    volumes:
+      - mysql: /var/lib/mysql
+  backend:
+    image: venkat18b/backend:v2
+    container_name: backend
+    depends_on:
+      - mysql
+
+  frontend:
+    image: venkat18b/frontend:v2
+    container_name: frontend
+    ports:
+      - 80:80
+    depends_on:
+      - backend
