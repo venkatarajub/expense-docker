@@ -2,7 +2,7 @@ version: "3"
 networks:
 - expense:
 volumes:
-- mysql
+- mysql:
 services:
   mysql:
     image: venkat18b/mysql:v2
