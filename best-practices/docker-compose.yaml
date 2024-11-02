@@ -17,7 +17,7 @@ services:
       - mysql
 
   frontend:
-    image: venkat18b/frontend:v2
+    image: venkat18b/frontend:v3
     container_name: frontend
     ports:
       - 80:80
