@@ -10,7 +10,7 @@ services:
     volumes:
       - mysql:/var/lib/mysql
   backend:
-    image: venkat18b/backend:v2
+    image: venkat18b/backend:v3
     container_name: backend
     command: sh -c "sleep 10 && node /opt/server/index.js"
     depends_on:
