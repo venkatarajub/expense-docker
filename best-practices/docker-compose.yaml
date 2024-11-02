@@ -5,7 +5,7 @@ volumes:
   mysql:
 services:
   mysql:
-    image: venkat18b/mysql:v2
+    image: venkat18b/mysql:v3
     container_name: mysql
     volumes:
       - mysql:/var/lib/mysql
